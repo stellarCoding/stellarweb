@@ -4,10 +4,9 @@
 Project:	Vertica - Retina Ready Resume / CV & Portfolio
 Author:	Diego Pereira @ DotRex
 Version:	1.1
-Last change:	08/08/14 
+Last change:	08/08/14
 Primary use:	CV / Resume
 -------------------------------------------------------------------*/
-
 /*------------------------------------------------------------------
 [Table of contents]
 
@@ -28,10 +27,9 @@ Primary use:	CV / Resume
 15. Other Stuff
 16. Crossbrowser Stuff
 -------------------------------------------------------------------*/
-
 /* ==========================================================
-! 1. General 
-========================================================== */	
+! 1. General
+========================================================== */
 @import "variables.less";
 
 body {
@@ -43,18 +41,17 @@ body {
 	background-color: @color2;
 	background-position: center top;
 	-webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  position: relative !important;
-  padding: 10px;
-  @media @mobile {
-  	background-image: none;
-  }
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative !important;
+	padding: 10px;
+	@media @mobile {
+		background-image: none;
+	}
 }
-
 @media @laptop {
-	padding: 0px;
+	padding: 0;
 }
 
 ul {
@@ -66,7 +63,8 @@ hr {
 	border: 0;
 }
 
-h1, h2 {
+h1,
+h2 {
 	color: @color1;
 	margin-top: 0;
 }
@@ -81,6 +79,7 @@ h3 {
 	height: 30px;
 	line-height: 30px;
 	padding-top: 0;
+
 	&:hover {
 		.btn-hide-text {
 			width: 125px;
@@ -97,10 +96,12 @@ h3 {
 		}
 	}
 }
+
 .btn-default {
 	background: @color2;
 	color: @bgcolor;
-	border: @color2;	
+	border: @color2;
+
 	&:hover {
 		background: @color2 - #222!important;
 		color: @bgcolor;
@@ -111,6 +112,7 @@ h3 {
 	background: @color1;
 	border: @color1;
 	color: @bgcolor;
+
 	&:hover {
 		background: @color1 - #111!important;
 		color: @bgcolor;
@@ -121,6 +123,7 @@ h3 {
 	background: @color3;
 	border: @color3;
 	color: @bgcolor;
+
 	&:hover {
 		background: @color3 - #111!important;
 		color: @bgcolor;
@@ -146,11 +149,9 @@ h3 {
 .line-content {
 	opacity: 1;
 }
-
 /* ==========================================================
 ! 2. Tipography
-========================================================== */	
-
+========================================================== */
 p {
 	color: @textcolor;
 }
@@ -166,7 +167,6 @@ p {
 	}
 }
 
-
 .intro-title1 {
 	font-size: 36px;
 	color: @textcolor - #111;
@@ -177,12 +177,12 @@ p {
 	margin-top: 15px;
 	text-align: center;
 	@media @tablet {
-		text-align: left;		
+		text-align: left;
 		font-size: 40px;
 	}
 	@media @laptop {
 		margin-top: 0;
-		font-size: 54px;
+		font-size: 49px;
 	}
 }
 
@@ -204,7 +204,7 @@ p {
 	font-weight: bold;
 	font-size: 40px;
 	line-height: 40px;
-	padding-bottom: 20px;	
+	padding-bottom: 20px;
 	@media @laptop {
 		margin-left: -15px;
 	}
@@ -222,10 +222,9 @@ p {
 	font-size: 20px;
 	margin-top: 14px;
 }
-
 /* ==========================================================
 ! 3. Page loader
-========================================================== */	
+========================================================== */
 #page-loader {
 	width: 100%;
 	height: 100%;
@@ -235,7 +234,6 @@ p {
 	top: 0;
 	left: 0;
 	z-index: 9999;
-
 }
 
 .loading-wrapper {
@@ -246,50 +244,49 @@ p {
 	margin-left: -125px;
 }
 
-
-.tp-loader 	{	  
-	z-index:10000; 
-	position:relative;
+.tp-loader {
+	z-index: 10000;
+	position: relative;
 }
 
-			
 .tp-loader.spinner {
-  width: 30px;
-  height: 30px;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  background-color: #fff;
-  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
-  -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);  
-  -webkit-animation: tp-rotateplane 1.2s infinite ease-in-out;
-  animation: tp-rotateplane 1.2s infinite ease-in-out;
-  border-radius: 3px;
+	width: 30px;
+	height: 30px;
+	margin: 0 auto 10px;
+	background-color: #fff;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.15);
+	-webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.15);
+	-webkit-animation: tp-rotateplane 1.2s infinite ease-in-out;
+	animation: tp-rotateplane 1.2s infinite ease-in-out;
+	border-radius: 3px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 }
-
-
-
 @-webkit-keyframes tp-rotateplane {
-  0% { -webkit-transform: perspective(120px) }
-  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
-}
+	0% {
+		-webkit-transform: perspective(120px);
+	}
 
+	50% {
+		-webkit-transform: perspective(120px) rotateY(180deg);
+	}
+}
 @keyframes tp-rotateplane {
-  0% { 
-    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
-  } 50% { 
-    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
-  }
-}
+	0% {
+		transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+		-webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+	}
 
+	50% {
+		transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+		-webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+	}
+}
 /* ==========================================================
 ! 4. Header-colors
-========================================================== */	
+========================================================== */
 .top-colors {
- padding: 0 !important;
+	padding: 0 !important;
 }
 
 .top-color {
@@ -310,20 +307,19 @@ p {
 .top-color3 {
 	background: @color3;
 }
-
 /* ==========================================================
 ! 5. Side Menu
-========================================================== */	
+========================================================== */
 .side-menu-open {
 	position: fixed;
 	left: 0;
 	height: 100%;
 	cursor: pointer;
-	z-index:777;
+	z-index: 777;
 }
 
-.side-menu-button {	
-	font-weight: bold;	
+.side-menu-button {
+	font-weight: bold;
 	display: block;
 	top: 80px;
 	margin-top: 40px;
@@ -347,9 +343,11 @@ p {
 	padding: 60px 22px;
 	z-index: 888;
 	opacity: 0.9;
+
 	a {
 		color: @bgcolor;
 	}
+
 	p {
 		color: @bgcolor;
 	}
@@ -359,12 +357,14 @@ p {
 	list-style: none;
 	width: 100%;
 	margin-bottom: 45px;
+
 	li {
 		display: block;
 		width: 100%;
 		font-size: 14px;
 		border-bottom: 1px dotted @bgcolor - #999;
 		background: none !important;
+
 		a {
 			color: @bgcolor - #222;
 			background: none !important;
@@ -376,17 +376,19 @@ p {
 			padding: 0 !important;
 			text-transform: uppercase;
 			.anima(0.3s);
+
 			&:hover {
-				padding-left: 5px!important;
+				padding-left: 5px !important;
 				color: #fff;
 				font-weight: 300;
 				text-decoration: none;
 			}
 		}
 	}
+
 	li.active {
 		a {
-			padding-left: 5px!important;
+			padding-left: 5px !important;
 			color: #fff;
 			font-weight: 300;
 			text-decoration: none;
@@ -395,8 +397,9 @@ p {
 	}
 }
 
-.nav >li >a {
+.nav > li > a {
 	padding: 0;
+
 	&:hover {
 		background: none;
 	}
@@ -409,12 +412,8 @@ p {
 	text-align: center;
 	font-size: 22px;
 	text-transform: uppercase;
-	padding-left: 2px;
-	padding-right: 2px;
-	padding-top: 8px;
-	padding-bottom: 8px;
+	padding: 8px 2px;
 	font-weight: 200;
-	
 }
 
 .side-menu-job {
@@ -426,7 +425,6 @@ p {
 	color: @bgcolor - #222;
 }
 
-
 #side-menu-close {
 	font-size: 18px;
 	color: #fff;
@@ -436,6 +434,7 @@ p {
 	right: 8px;
 	top: 3px;
 	cursor: pointer;
+
 	&:hover {
 		opacity: 1;
 	}
@@ -455,6 +454,7 @@ p {
 	font-weight: 200;
 	font-size: 10px;
 	.anima(0.2s);
+
 	&:hover {
 		background: @bgcolor + #555;
 		opacity: 0.8;
@@ -462,19 +462,18 @@ p {
 }
 
 .side-menu-buttons {}
-
 /* ==========================================================
 ! 6. Content
-========================================================== */	
+========================================================== */
 #content-body {
-	margin-top: 10px;	
-	margin-bottom: 10px;	
+	margin-top: 10px;
+	margin-bottom: 10px;
 	position: relative;
 	@media @laptop {
-		margin-top: 45px;	
+		margin-top: 45px;
 		margin-bottom: 90px;
 	}
-	@media @desktop {	
+	@media @desktop {
 		margin-bottom: 200px;
 	}
 }
@@ -484,15 +483,12 @@ p {
 	padding-top: 15px;
 }
 
-
 .resume-container {
-	background: url('../img/paper-bg2.png') no-repeat top left,
-	url('../img/paper-bg-bot.png') no-repeat bottom right, @bgcolor;
+	background: url('../img/paper-bg2.png') no-repeat top left, url('../img/paper-bg-bot.png') no-repeat bottom right, @bgcolor;
 }
-
 /* ==========================================================
 ! 7. Profile intro
-========================================================== */	
+========================================================== */
 .profile-intro {
 	margin-top: 50px;
 	position: relative;
@@ -511,6 +507,7 @@ p {
 	overflow: hidden;
 	margin: 0 auto;
 	background: @bgcolor;
+
 	img {
 		width: 188px;
 		height: 188px;
@@ -518,15 +515,14 @@ p {
 		.border-radius(100%);
 		overflow: hidden;
 		.anima(0.3s);
-		&:hover {
-		}
-	}	
-}
 
+		&:hover {}
+	}
+}
 /* ==========================================================
 ! 8. Vertical Timeline
-========================================================== */	
-.timeline-wrap	{
+========================================================== */
+.timeline-wrap {
 	background: @color1;
 	position: relative;
 	z-index: 88;
@@ -545,7 +541,6 @@ p {
 .bg1 {
 	background: @bgcolor;
 }
-
 
 .timeline-progress {
 	background: url('../img/progress-bar.png') repeat-y center;
@@ -572,16 +567,14 @@ p {
 	background-size: 400px 500px;
 }
 
-
 .timeline-title {
 	background: url('../img/progress-section-title3.png') no-repeat center center;
 	background-size: 400px 500px;
 }
 
-.timeline-margin {
+.timeline-margin {}
 
-}
-.timeline-margin .content-wrap {	
+.timeline-margin .content-wrap {
 	height: 40px;
 	@media @laptop {
 		height: 80px;
@@ -592,8 +585,8 @@ p {
 	.content-wrap {
 		@media @laptop {
 			height: 260px;
-		}		
-	}	
+		}
+	}
 }
 
 .line-content {
@@ -605,15 +598,15 @@ p {
 	@media @desktop {
 		margin-left: -35px;
 	}
+
 	p {
 		font-size: 14px;
 	}
 }
-
 /* ==========================================================
 ! 9. Section: Education and Work Experience
-========================================================== */	
-.line-content-education {	
+========================================================== */
+.line-content-education {
 	padding-bottom: 10px;
 	@media @laptop {
 		min-height: 150px;
@@ -621,44 +614,49 @@ p {
 	}
 }
 
-.graduation-time, .job {
+.graduation-time,
+.job {
 	font-size: 14px;
 	font-weight: bold;
 	color: @textcolor + #444;
 }
 
-.graduation-date, .job-date {
+.graduation-date,
+.job-date {
 	font-size: 14px;
 	font-style: italic;
 	font-weight: 200;
 }
 
-.graduation-description, .job-description {
-	font-size: 13px;	
+.graduation-description,
+.job-description {
+	font-size: 13px;
+
 	p {
 		font-size: 13px;
 		line-height: 19px;
 	}
 }
-
 /* ==========================================================
 ! 10. Section: Skills
-========================================================== */	
+========================================================== */
 .progress {
-    position: relative;
+	position: relative;
 	height: 25px;
 }
+
 .progress > .progress-type {
 	position: absolute;
-	left: 0px;
+	left: 0;
 	font-size: 13px;
 	padding: 3px 30px 2px 10px;
 	color: rgb(255, 255, 255);
 	background-color: rgba(25, 25, 25, 0.2);
 }
+
 .progress > .progress-completed {
 	position: absolute;
-	right: 0px;
+	right: 0;
 	font-weight: 800;
 	padding: 3px 10px 2px;
 	color: #888;
@@ -681,7 +679,6 @@ p {
 .progress-bar-3 {
 	background: @color3;
 }
-
 /* ==========================================================
 ! 11. Section: Portfolio
 ========================================================== */
@@ -693,32 +690,36 @@ p {
 
 .portfolio-item {
 	position: relative;
-	cursor:crosshair!important;
+	cursor: crosshair!important;
 	width: 200px;
 	height: 180px;
 	overflow: hidden;
 	background: none;
+
 	&:hover {
-		.hover-bg {
-		}
-		.hover {
-		}
-		img {			
+		.hover-bg {}
+
+		.hover {}
+
+		img {
 			-webkit-transform: scale(1.2) rotate(-5deg);
-		    -o-transform: scale(1.2) rotate(-5deg);
-		    transform: scale(1.2) rotate(-5deg);
+			-o-transform: scale(1.2) rotate(-5deg);
+			transform: scale(1.2) rotate(-5deg);
 		}
 	}
+
 	a {
 		background: none;
 		display: block;
-		cursor:crosshair!important;
+		cursor: pointer!important;
 	}
+
 	img {
 		width: 100%;
 		border-radius: 0;
 		.anima(0.3s);
 	}
+
 	.hover-bg-wrapper {
 		position: absolute;
 		top: 0;
@@ -729,8 +730,9 @@ p {
 		z-index: 3;
 		display: none;
 	}
-	.hover-bg {		
-		background: @color1 - #222;		
+
+	.hover-bg {
+		background: @color1 - #222;
 		opacity: 0.9;
 		width: 100%;
 		height: 100%;
@@ -738,6 +740,7 @@ p {
 		min-height: 10px;
 		z-index: 3;
 	}
+
 	.hover {
 		position: absolute;
 		width: 100%;
@@ -745,13 +748,16 @@ p {
 		z-index: 4;
 		color: #fff;
 		opacity: 1;
+
 		p {
-			color: #fff;			
+			color: #fff;
 			text-align: center;
 		}
+
 		p.zoomi {
-			font-size: 56px;			
+			font-size: 56px;
 		}
+
 		p.portfolio-item-title {
 			font-size: 12px;
 			text-transform: uppercase;
@@ -764,19 +770,23 @@ p {
 		padding: 20px;
 	}
 }
+
 .bx-controls-direction {
 	margin-top: 5px;
+
 	.disabled {
 		opacity: 0.3;
 		cursor: default;
 		background: #333;
+
 		&:hover {
 			background: #333;
 		}
 	}
 }
 
-.bx-prev, .bx-next {
+.bx-next,
+.bx-prev {
 	display: inline-block;
 	height: 30px;
 	width: 40px;
@@ -786,12 +796,12 @@ p {
 	line-height: 30px;
 	margin-right: 3px;
 	.anima(0.2s);
+
 	&:hover {
 		color: #fff;
 		background: @color2 - #333;
 	}
 }
-
 /* ==========================================================
 ! 12. Section: Contact
 ========================================================== */
@@ -807,6 +817,7 @@ p {
 .form-group {
 	margin-bottom: 10px;
 	position: relative;
+
 	label.error {
 		display: block;
 		position: absolute;
@@ -821,9 +832,10 @@ p {
 	}
 }
 
-input.form-control, textarea.form-control {
+input.form-control,
+textarea.form-control {
 	background: @color1;
-	border: 0px solid @color1 + #111;
+	border: 0 solid @color1 + #111;
 	padding-top: -2px;
 	.border-radius(5px);
 	color: @bgcolor + #111;
@@ -847,29 +859,28 @@ textarea.form-control {
 	height: 40px;
 	line-height: 40px;
 	.anima(0.3s);
-	&:hover {
-		
-	}
+
+	&:hover {}
 }
 
 ::-webkit-input-placeholder {
-   color: @bgcolor  !important;
-   font-style: italic;
-}
-
-:-moz-placeholder { 
-   color: @bgcolor  !important;
+	color: @bgcolor !important;
 	font-style: italic;
 }
 
-::-moz-placeholder { 
-   color: @bgcolor !important; 
-   font-style: italic;
+:-moz-placeholder {
+	color: @bgcolor !important;
+	font-style: italic;
 }
 
-:-ms-input-placeholder {  
-   color: @bgcolor  !important; 
-   font-style: italic;
+::-moz-placeholder {
+	color: @bgcolor !important;
+	font-style: italic;
+}
+
+:-ms-input-placeholder {
+	color: @bgcolor !important;
+	font-style: italic;
 }
 
 .contact-subtitle-1 {
@@ -890,6 +901,7 @@ textarea.form-control {
 	text-align: center;
 	margin-top: 20px;
 	font-size: 16px;
+
 	p {
 		font-size: 16px;
 	}
@@ -900,9 +912,7 @@ textarea.form-control {
 	}
 }
 
-.form-result {
-}
-
+.form-result {}
 
 .modal-wrap {
 	display: none;
@@ -929,13 +939,15 @@ textarea.form-control {
 	width: 250px;
 	z-index: 9999;
 	padding: 10px 20px;
+
 	.modal-title {
 		color: @color2;
 		font-size: 22px;
 		border-bottom: 1px solid #ccc;
-		margin-bottom: 5px;	
-		font-weight: bold;	
+		margin-bottom: 5px;
+		font-weight: bold;
 	}
+
 	p {
 		font-size: 14px;
 		margin-bottom: 0;
@@ -947,7 +959,6 @@ textarea.form-control {
 		color: #fff;
 	}
 }
-
 /* ==========================================================
 ! 13. Section: Thank you
 ========================================================== */
@@ -963,13 +974,11 @@ textarea.form-control {
 	font-style: italic;
 	position: relative;
 	top: -5px;
-	text-align: center;	
+	text-align: center;
 	@media @laptop {
 		text-align: left;
 	}
 }
-
-
 /* ==========================================================
 ! 14. Footer
 ========================================================== */
@@ -980,44 +989,43 @@ textarea.form-control {
 	padding-bottom: 17px;
 	text-align: center;
 	margin-top: 130px;
+
 	p {
 		color: #fff;
 	}
+
 	.quote {
 		font-size: 22px;
 		font-weight: 200;
 		margin-bottom: 5px;
 	}
+
 	.author {
 		font-size: 14px;
 		font-weight: bold;
 	}
 }
-
 /* ==========================================================
 ! 15. Other Stuff
 ========================================================== */
-
 /*Nivo Lightbox*/
 .nivo-lightbox-theme-default .nivo-lightbox-title {
-font-style: normal;
-font-weight: normal;
-background: #000;
-opacity: 0.9;
-color: #fff;
-padding: 15px 15px;
-border-radius: 5px;
-width: 100%;
+	font-style: normal;
+	font-weight: normal;
+	background: #000;
+	opacity: 0.9;
+	color: #fff;
+	padding: 15px;
+	border-radius: 5px;
+	width: 100%;
 }
 
 .nivo-lightbox-theme-default .nivo-lightbox-title-wrap {
-bottom: 0px;
+	bottom: 0;
 }
-
 /* ==========================================================
 ! 16. Crossbrowser Stuff
 ========================================================== */
-
 /*Safari*/
 .safari {
 	.timeline-bg {
@@ -1026,34 +1034,40 @@ bottom: 0px;
 			//background: none;
 		}
 	}
+
 	.btn {
 		display: inline;
 		padding-top: 5px;
 	}
+
 	.side-menu-button {
 		display: block;
 	}
+
 	.form-send {
-		padding-top: 0!important;
+		padding-top: 0 !important;
 		margin: 0 auto;
 	}
+
 	.btn-side-menu {
 		display: block;
 		.anima(0s);
 		padding-top: 0;
 		opacity: 1;
 	}
-
 }
+
 .mac.gecko {
 	.full-height {
 		border-left: 1px solid @bgcolor;
 	}
+
 	#skills {
 		.line-content {
 			min-height: 170px;
 		}
 	}
+
 	#portfolio {
 		.line-content {
 			height: 280px;

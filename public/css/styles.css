@@ -4,7 +4,7 @@
 Project:	Vertica - Retina Ready Resume / CV & Portfolio
 Author:	Diego Pereira @ DotRex
 Version:	1.2
-Last change:	17/06/15 
+Last change:	17/06/15
 Primary use:	CV / Resume
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
@@ -28,7 +28,7 @@ Primary use:	CV / Resume
 16. Crossbrowser Stuff
 -------------------------------------------------------------------*/
 /* ==========================================================
-! 1. General 
+! 1. General
 ========================================================== */
 .color1 {
   color: #249991;
@@ -186,7 +186,7 @@ p {
 @media (min-width:992px) {
   .intro-title1 {
     margin-top: 0;
-    font-size: 54px;
+    font-size: 49px;
   }
 }
 .intro-title2 {
@@ -684,7 +684,7 @@ p {
 .portfolio-item a {
   background: none;
   display: block;
-  cursor: crosshair!important;
+  cursor: pointer!important;
 }
 .portfolio-item img {
   width: 100%;
